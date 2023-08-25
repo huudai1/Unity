@@ -1,17 +1,16 @@
 using UnityEngine;
 
-public class CursorLock : MonoBehaviour
+public class MouseLock : MonoBehaviour
 {
+    private bool isMouseLocked = true;
+
     void Update()
     {
-        //Press the space bar to apply no locking to the Cursor
-        if (Input.GetKey(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.G))
         {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            Cursor.lockState = CursorLockMode.None;
+            isMouseLocked = !isMouseLocked;
+            Cursor.lockState = isMouseLocked ? CursorLockMode.Locked : CursorLockMode.None;
+            Cursor.visible = !isMouseLocked;
         }
     }
 }
