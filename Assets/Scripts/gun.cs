@@ -30,6 +30,8 @@ public class gun : MonoBehaviour
     
     void Update()
     {
+        if (Input.GetKey(KeyCode.T))
+        isReloading = true;
 
         if (isReloading)
         return;
@@ -39,7 +41,7 @@ public class gun : MonoBehaviour
             StartCoroutine(Reload());
             return;
         }
-        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
+        if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
@@ -54,7 +56,7 @@ public class gun : MonoBehaviour
 
         animator.SetBool("Reloadding", true);
 
-        yield return new WaitForSeconds(reloadTime);
+        yield return new WaitForSeconds(2);
 
         animator.SetBool("Reloadding", false);
 

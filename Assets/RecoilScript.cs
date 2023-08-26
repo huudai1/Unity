@@ -27,4 +27,5 @@ public class RecoilScript : MonoBehaviour
         yield return new WaitForSeconds(0.30f);
         Weapon.GetComponent<Animator>().Play("New State");
     }
+
 }

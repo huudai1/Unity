@@ -581,7 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smooth: 20
-  swayMultipler: 3
+  swayMultipler: 6
 --- !u!95 &862105776
 Animator:
   serializedVersion: 5
@@ -6766,8 +6766,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  gravity: -9.8
-  jumpHeight: 3
+  gravity: -20
+  jumpHeight: 1
 --- !u!114 &7718158707276593724
 MonoBehaviour:
   m_ObjectHideFlags: 0
