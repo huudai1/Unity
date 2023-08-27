@@ -5829,7 +5829,8 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 984b703991face44b83b1a6553a19747, type: 2}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: 984b703991face44b83b1a6553a19747, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -5855,7 +5856,7 @@ MonoBehaviour:
   fbsCam: {fileID: 2057493334}
   impactEffect: {fileID: 0}
   ok: {fileID: 1222022065}
-  animator: {fileID: 1449635536}
+  Weapon: {fileID: 0}
 --- !u!1001 &1452295482
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -17,8 +17,7 @@ public class gun : MonoBehaviour
     public Camera fbsCam;
     public GameObject impactEffect;
     public ParticleSystem ok;
-
-    public Animator animator;
+    public GameObject Weapon;
 
     private float nextTimeToFire = 0f;
 
@@ -54,11 +53,11 @@ public class gun : MonoBehaviour
         isReloading = true;
         Debug.Log("Reloading...");
 
-        animator.SetBool("Reloadding", true);
+        Weapon.GetComponent<Animator>().Play("Reloadding");
 
         yield return new WaitForSeconds(2);
 
-        animator.SetBool("Reloadding", false);
+        Weapon.GetComponent<Animator>().Play("NewState");
 
         currentAmmo = maxAmmo;
         isReloading = false;
